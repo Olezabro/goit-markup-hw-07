@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <!-- <header class="header">
+    <header class="header">
         <div class="container header-container">
             <nav class="header-nav">
                 <a href="./index.html" class="header-logo link"><span>Web</span>Studio</a>
@@ -24,14 +24,20 @@
                     <li class="header-item"><a href="" class="header-link link">Contacts</a></li>
                 </ul>
             </nav>
+            
             <address class="header-adress">
                 <ul class="header-adress-list list">
                     <li class="header-mail"><a href="mailto:info@devstudio.com" class="header-contacts">info@devstudio.com</a>
                     <li class="header-tel"><a href="tel:+110001111111" class="header-contacts">+11 (000) 111-11-11</a></li>
                 </ul>
             </address>
+            <button class="menu-toggle js-close-menu">
+                <svg class="header-burger-menu" width="32" height="22">
+                  <use href="./images/icons.svg#menu-burger-icon"></use>
+                </svg>
+            </button>
         </div>
-    </header> -->
+    </header>
 
     <main>
         <!-- Main Section -->
@@ -313,7 +319,7 @@
         <!-- /Customers Section-->
     </main>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="footer-container container">
             <div class="footer-content">
                 <a href="./index.html" class="footer-logo link"><span>Web</span>Studio</a>
@@ -370,7 +376,7 @@
             </div>
 
         </div>
-    </footer> -->
+    </footer>
     <!-- Modals -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -416,6 +422,45 @@
     </div>
     <!-- /Modals -->
     <script src="./js/modal.js"></script>
+<!-- ----------------------------------------------------------------------- -->
+<!--                               mobile menu                               -->
+<!-- ----------------------------------------------------------------------- -->
+<div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle js-close-menu">
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu">
+      <li><a href="" class="link">About</a></li>
+      <li><a href="" class="link">Products</a></li>
+      <li><a href="" class="link">Contacts</a></li>
+      <li><a href="" class="link">Career</a></li>
+    </ul>
+  </div>
+  <script
+  defer
+  src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+  integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+  crossorigin="anonymous"
+></script>
+<script defer src="./
+
+js/mobile-menu.js"></script>
+
+      <!-- ------------------------- mobile-menu-script -------------------------- -->
+      
 </body>
 
 </html>
