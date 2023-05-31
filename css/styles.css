@@ -33,11 +33,33 @@ body {
 }
 
 .container{
-    width: 1158px;
-    padding: 0 15px;
+    /* ------------------------------ basic styles ------------------------------ */
+    min-width: 320px;
+    max-width: 396px;
     margin: 0 auto;
-    /*outline: 1px solid red;*/
+    
+    /*width: 1158px;
+    
+    margin: 0 auto;
+    outline: 1px solid red;*/
 }
+    /* ------------------------------ tablet styles ----------------------------- */
+    @media only screen and (min-width: 768px) {
+       .container {
+        max-width: 736px;
+      }
+
+      
+    }
+    /* ----------------------------- desktop styles ----------------------------- */
+    @media only screen and (min-width: 1128px) {
+       .container {
+        max-width: 1128px;
+        padding: 0 15px;
+        
+      }
+    }
+
 
 .list {
     list-style: none;
@@ -217,16 +239,35 @@ body {
 
 .main {
     margin: 0 auto;
-    margin-top: 72px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-img.jpg);
     background-color: rgba(46, 47, 66, 0.7);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 188px 0;
-    max-width: 1440px;
+    margin-top: 70px;
+    padding: 112px 0;
+    max-width: 768; 
+    /* ;
     
+    padding: 188px 0;
+    max-width: 1440px; */
 }
+
+@media only screen and (min-width: 768px) {
+   .main {
+    padding: 112px 0 108px;
+    max-width: 1200;
+  }
+}
+
+@media only screen and (min-width: 1128px) {
+   .main {
+    padding: 188px 0; 
+    max-width: 1400px;
+  }
+}
+
+
 
 .main-container {
    
@@ -234,15 +275,25 @@ body {
 }
 
 .main-title {
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--main-color);
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+   .main-title{
     font-size: 56px;
     line-height: 1.07;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: var(--main-color);
     max-width: 496px;
-    margin: 0 auto;
-      
-}
+  }
+}   
+
 .main-btn {
     font-family: 'Roboto';
     font-weight: 500;
@@ -270,27 +321,91 @@ body {
 /* ----------- skills ----------- */
 
 .skills {
+    padding: 96px 0;
+    
+}
+
+@media only screen and (min-width: 1128px) {
+   .skills {
     padding: 120px 0;
+  }
 }
 
 .skills-list {
     display: flex;
-    gap: 24px;
+    gap: 72px 24px;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+   .skills-list {
+    row-gap: 72px;
+  }
+}
+
+@media only screen and (min-width: 1128px) {
+    .skills-list {
+     flex-wrap: nowrap;
+   }
 }
 
 .skills-item {
-    max-width: 264px;
+    max-width: 396px;
 }
+
+@media only screen and (min-width: 768px) {
+   .skills-item {
+    max-width: 356px;
+  }
+}
+
+@media only screen and (min-width: 1px) {
+    .skills-item {
+     max-width: 264px;
+   }
+ }
 
 
 .skills-subtitle { 
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--second-color);
     margin-bottom: 8px;
 }
+
+@media only screen and (min-width: 1128px) {
+   .skills-subtitle{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left; 
+  }
+}
+
 .skills-item-text {
  
 }
 
+.skills-paragraph {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+@media only screen and (min-width: 1128px) {
+   .skills-paragraph {
+    font-weight: 400;
+    
+  }
+}
+
 .skills-image {
+    
     margin-bottom: 8px;
     background: #F4F4FD;
     border-radius: 4px;
@@ -298,6 +413,14 @@ body {
     align-items: center;
     justify-content: center;
     height: 112px;
+    display: none;
+}
+
+@media only screen and (min-width: 1128px) {
+   .skills-image {
+    display: block;
+    
+  }
 }
 
 .skills-icon {
@@ -309,8 +432,11 @@ body {
 /* ----------- work ----------- */
 
 .work {
+    display: none;
     padding-bottom: 120px;
 }
+    
+
 .work-title {
     color: var(--second-color);    
     margin-bottom: 72px;
@@ -326,11 +452,29 @@ body {
 .work-container {
 }
 
+@media only screen and (min-width: 1128px) {
+       .work {
+        display: block;
+        
+      }
+    }
 /* ----------- team ----------- */
 
 .team {
     background: #F4F4FD;
-    padding: 120px 0;
+    padding: 96px 0 128px;
+}
+
+@media only screen and (min-width: 768px) {
+   .team {
+    padding: 96px 0 104px;
+  }
+}
+
+@media only screen and (min-width: 1128px) {
+    .team {
+     padding: 120 0;
+   }
 }
 
 .team-container {
@@ -348,10 +492,27 @@ body {
 
 .team-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
+    justify-content: center;
 }
+
+@media only screen and (min-width: 768px) {
+   .team-list {
+    gap: 64px 24px;
+  }
+}
+
+@media only screen and (min-width: 1128px) {
+   .team-list {
+    flex-wrap: nowrap;
+
+    
+  }
+}
+
 .team-item {
-    width: calc((100% - 72px) / 4);
+    width: 264px;
     background: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
@@ -412,8 +573,16 @@ body {
 /* ----------- customers ----------- */
 
 .customers {
-    padding: 120px 0 120px;
+    padding: 96px 0 96px;
 }
+
+@media only screen and (min-width: 1128px) {
+   .customers {
+    padding: 120px 0 120px;
+    
+  }
+}
+
 .customers-container {
 }
 
@@ -422,16 +591,28 @@ body {
 }
 .customers-list {
     display: flex;
-    gap: 24px;
+    gap: 72px 16px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.customers-item {
-    width: calc((100% - 120px) / 6);
-    height: 88px;
-    fill: #8E8F99;
+@media only screen and (min-width: 768px) {
+   .customers-list{
+    gap: 72px 24px;
+    justify-content: center;
+  }
 }
+
+@media only screen and (min-width: 1128px) {
+   .customers-list{
+    flex-wrap: nowrap;
+    
+  }
+}
+
 .customers-link {
     display: flex;
+    width: 190px;
     color: #8e8f99;
     border: 1px solid #8E8F99;
     border-radius: 4px;
@@ -439,6 +620,18 @@ body {
     justify-content: center;
     height: 100%;
     transition: border-color var(--hover-focus-trans), color var(--hover-focus-trans);
+}
+
+@media only screen and (min-width: 768px) {
+   .customers-link{
+    width: 168px;
+    
+  }
+}
+
+.customers-item {
+    height: 88px;
+    fill: #8E8F99;
 }
 
 .customers-icon {
